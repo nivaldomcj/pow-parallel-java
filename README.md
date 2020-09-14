@@ -1,28 +1,9 @@
 # Proof of Work
 
-This project is a simple proof of work implementation for academic purpose.
+This project is a simple proof of work implementation for academic purposes. All the credits goes to <a href="https://github.com/marcelohweb/">@marcelohweb</a>.
+<br><br>
+My only modification was just creating a new file (ProofOfWorkParallel.java) based on the sources on an attempt to create a "parallel" version using threads, for academic / explanation purposes.
 
-## Run
-
-Make sure that java 8 is installed and is in the path variable.
-
-	git clone https://github.com/marcelohweb/proof-of-work-java.git
-	cd proof-of-work-java/src/
-	javac ProofOfWork.java
-	javac ProofOfWorkVerifier.java
-	
-## Mining:
-
-	java ProofOfWork 00000 0000038b13568323e3886a7391f6346f555b247bb86f7d9532409874572c45bd 871714dcbae6c8193a2bb9b2a69fe1c0440399f38d94b3a0f1b447275a2991234 1392872245
-	
-Result:
-
-<img src="http://66.7.213.120/~mswebcom/pow.png">
-
-### Verifing:
-
-	java ProofOfWorkVerifier 00000 0000038b13568323e3886a7391f6346f555b247bb86f7d9532409874572c45bd 871714dcbae6c8193a2bb9b2a69fe1c0440399f38d94b3a0f1b447275a2991234 1392872245 239327
-
-Result:
-
-<img src="http://66.7.213.120/~mswebcom/valid_block.png">
+The original repository from the author: https://github.com/marcelohweb/proof-of-work-java
+<br>
+His article about Blockchain and Proof of Work: https://medium.com/@marceloh.web/blockchain-and-proof-of-work-f35ffc33c459
