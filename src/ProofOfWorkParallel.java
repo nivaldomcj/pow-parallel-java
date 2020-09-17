@@ -104,13 +104,6 @@ public class ProofOfWorkParallel {
                                 rawHash = digest.digest(digest.digest(rawHash));
                                 strHash = Utils.bytesToHex(Utils.reverseBytes(rawHash));
 
-//                                System.out.printf(
-//                                        "(Thread #%s) [%d -> %d] Nonce: %s, Hash: %s\n",
-//                                        Thread.currentThread().getName(),
-//                                        threadNonceFrom, threadNonceUntil,
-//                                        Long.toString(nonce), strHash
-//                                );
-
                                 if (strHash.startsWith(difficulty)) {
                                     solved = true;
                                     System.out.println("------------------------");

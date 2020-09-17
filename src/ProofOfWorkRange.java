@@ -2,29 +2,35 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * Code based on ProofOfWork.java
+ */
 public class ProofOfWorkRange {
 
     public static void main(String[] args) throws NoSuchAlgorithmException {
-
-        //Set the difficulty by typing the amount of zeros that you want to the hash to begin
-        String dificulty = args[0];
-
-        //See more https://en.bitcoin.it/wiki/Block_hashing_algorithm
-
         //Block header
-
-        //Used to keep track of protocol upgrades
-        long version = 2;
-        String prev_block = args[1];
-        String mrkl_root = args[2];
+        //See more https://en.bitcoin.it/wiki/Block_hashing_algorithm
+        //Set the difficulty by typing the amount of zeros that you want to the hash to begin
+        String difficulty = args[0];
+        String previousBlock = args[1];
+        String merkelRoot = args[2];
         long timestamp = Long.parseLong(args[3]);
-        //Target. Changes every 2016 blocks
+
+        // Used to keep track of protocol upgrades
+        long version = 2;
+
+        // Target. Changes every 2016 blocks
         long bits = 419520339;
 
+        // Nonce ranges (start/stop)
         long nonce = Long.parseLong(args[4]);
         long nonceStop = Long.parseLong(args[5]);
 
-        String message = version + new String(Utils.reverseBytes(prev_block.getBytes())) + new String(Utils.reverseBytes(mrkl_root.getBytes())) + timestamp + bits;
+        String message = version
+                + new String(Utils.reverseBytes(previousBlock.getBytes()))
+                + new String(Utils.reverseBytes(merkelRoot.getBytes()))
+                + timestamp
+                + bits;
         String hashTest = null;
 
         while (true) {
@@ -36,7 +42,7 @@ public class ProofOfWorkRange {
             hashTest = Utils.bytesToHex(Utils.reverseBytes(hash));
             System.out.println("Nonce: " + nonce + " | Hash: " + hashTest);
 
-            if (hashTest.substring(0, dificulty.length()).equals(dificulty)) {
+            if (hashTest.substring(0, difficulty.length()).equals(difficulty)) {
                 System.out.println("------------------------");
                 System.out.println("Block mined!");
                 System.out.println("Nonce: " + nonce);
