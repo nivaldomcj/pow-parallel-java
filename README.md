@@ -38,11 +38,13 @@ Example of execution of ProofOfWork:
 
 - Command:
 
-`java ProofOfWork 00000 0000038b13568323e3886a7391f6346f555b247bb86f7d9532409874572c45bd 871714dcbae6c8193a2bb9b2a69fe1c0440399f38d94b3a0f1b447275a2991234 1392872245`
+```java ProofOfWork 00000 0000038b13568323e3886a7391f6346f555b247bb86f7d9532409874572c45bd 871714dcbae6c8193a2bb9b2a69fe1c0440399f38d94b3a0f1b447275a2991234 1392872245```
 
 - Result:
 
-[TODO]
+![pow](img/pow.png)
+
+<hr>
 
 ProofOfWorkParallel have 5 args: 
     * Difficulty (number of zeros hash should begin with)
@@ -59,7 +61,9 @@ Example of Execution of ProofOfWorkRange:
 
 - Result:
 
-[TODO]
+![pow-parallel](img/pow-parallel.png)
+
+<hr>
 
 ProofOfWorkRange have 6 args:
     * Difficulty (number of zeros hash should begin with)
@@ -75,7 +79,7 @@ ProofOfWorkRange have 6 args:
 
 - Result:
 
-[TODO]
+![pow-range](img/pow-range.png)
 
 ## Checking
 
@@ -94,4 +98,4 @@ ProofOfWorkVerifier have 5 args:
 
 - Result:
 
-[TODO]
+![pow-verifier](img/pow-verifier.png)
