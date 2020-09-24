@@ -1,7 +1,10 @@
 # Proof of Work
 
-This project is a simple proof of work implementation for academic purposes. 
+This project is a simple proof of work implementation for academic purposes. I just modified the original source files to add a parallel/ranged version of it =)
+<br>
+<br>
 All the credits goes to <a href="https://github.com/marcelohweb/">@marcelohweb</a>.
+
 <br><br>
 The original repository from the author:
 <br>
