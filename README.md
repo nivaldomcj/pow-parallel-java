@@ -4,7 +4,6 @@ This project is a simple proof of work implementation for academic purposes. I j
 <br>
 <br>
 All the credits goes to <a href="https://github.com/marcelohweb/">@marcelohweb</a>.
-
 <br><br>
 The original repository from the author:
 <br>
